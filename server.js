@@ -18,7 +18,7 @@
  // })
  io.on('connection', function (socket) {
            console.log('client connection');
-           socketToMirror = client('http://192.168.31.87/mirror');
+           socketToMirror = client('http://127.0.0.1/mirror');
            socketToMirror.on("initLikes",function(like){
                 socket.emit("like", { like: like });
            })
